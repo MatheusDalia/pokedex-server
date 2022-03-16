@@ -1,40 +1,36 @@
-<p align="center">
-  <a href="http://citi.org.br">
-    <img src="https://raw.githubusercontent.com/jrmmendes/citi-doc-utils/master/citi_black.png" alt="CITi logo"/>
-  </a>
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/staging branch-develop-pink" alt="staging">
-  <img src="https://img.shields.io/badge/production branch-main-blue" alt="production">
-</p>
+# Pokedex website project.
 
-# CITi+ Server
-This is a project created with Node.js, Express.js, Typescript and PostgreSQL that aims to develop the CITi+ system server, which is a web system developed to organize and store the trainings given by the company's members aimed at internal and aspirants' training
+Hello, tudo joia? This project, based on a selective test by the company Redfox, was a challenge that I set myself to test my skills as a developer. From an excel file containing a list of pokemons, I created a pokedex site where the user can view all pokemons and their attributes in a friendly interface. The pokedex site also allows the user to search, delete and create a pokemon.
 
+For the development, I used Node.js, Express.js, Typescript and PostgreSQL
 
-## Running the project
+## Running the project:
 
+**Pre-setup:**
 1. Be sure you have **docker/docker-compose** and **yarn** (or **npm**, if you use it) installed.
 2. Clone the repository by running 
 ```bash 
-git clone git@github.com:CITi-UFPE/citiplus-server.git
+git clone https://github.com/MatheusDalia/teste-desenvolvimento-web.git
 ```
-3. Install all the dependencies by running
+
+**Server setup:**
+
+1. In the server folder, install all the dependencies by running
 ```bash 
 yarn install
 # or
 npm install
 ```
-4. Create a **.env** file and copy the following content to it:
+2. Create a **.env** file and copy the following content to it:
 ```dotenv
 # ###### GENERAL SETTINGS #######
-PROJECT_NAME=citiplus
+PROJECT_NAME=pokemon
 
 # ###### SERVER SETTINGS #######
 SERVER_PORT=3001
 
 # ###### DATABASE SETTINGS #######
-DATABASE_HOST=citiplus-db
+DATABASE_HOST=pokemon-db
 DATABASE_TYPE=postgres
 DATABASE_PORT=5432
 DATABASE_USER=postgres
@@ -49,32 +45,28 @@ DATABASE_TEST_PASSWORD=docker
 DATABASE_TEST_DB=citiplus-test
 ```
   
-5. To run the development server, run
+3. To run the development server, run
 ```bash
 docker-compose up
 ```
-6. To run the migrations, open your .env, and change your DATABASE_HOST to this:
+4. To run the migrations, open your .env, and change your DATABASE_HOST to this:
 ```bash
 DATABASE_HOST=localhost
 ```
-7. On a new terminal, run:
+5. On a new terminal, run:
 ```bash
 yarn migration
 ```
-8. Switch your .env DATABASE_HOST back to this:
+6. Switch your .env DATABASE_HOST back to this:
 ```bash
-DATABASE_HOST=citiplus-db
+DATABASE_HOST=pokemon-db
 ```
-9. Now the server should be running!
+7. Now the server should be running!
+
+**Client setup:**
+
+Go to https://github.com/MatheusDalia/pokedex-client.git and follow the instructions.
 
 ## Development team
 
-- **Caio Barreto** - *Project manager* - [CaiolBarreto](https://github.com/CaiolBarreto)
 - **Matheus Dalia** - *Front-end/Back-end developer* - [MatheusDalia](https://github.com/MatheusDalia)
-- **Maike Menezes** - *Front-end/Back-end developer* - [maikermenezes](https://github.com/maikermenezes)
-- **Pedro Queiroz** - *Front-end/Back-end developer* - [pccql](https://github.com/pccql)
-
-## Design team
-
-- **Maria Vitória Bandeira** - *UX/UI designer*
-- **Brenda Bezerra** - *UX/UI designer*
