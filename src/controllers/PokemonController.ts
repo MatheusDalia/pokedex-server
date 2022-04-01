@@ -150,7 +150,7 @@ class PokemonController {
     try {
       const pokemonRepository = getCustomRepository(PokemonRepository);
       const pokemons = await pokemonRepository.findAllPokemons();
-
+      console.log('Petkovic');
       if (!pokemons) {
         return next({
           status: 404,

@@ -1,7 +1,9 @@
 import express, { Express } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import cors from 'cors';
+// import { getCustomRepository } from 'typeorm';
 import routes from './routes';
+// import { PokemonRepository } from './repositories';
 
 import swaggerDocument from './docs';
 import { requestHandler, errorHandler } from './middlewares';
