@@ -22,4 +22,9 @@ pokemonRouter.route('/:userId')
     PokemonController.patch,
   );
 
+pokemonRouter.route('/createAll')
+  .post(
+    PokemonController.createAll,
+  );
+
 export default pokemonRouter;
